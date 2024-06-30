@@ -1,9 +1,7 @@
 // Array of links
 const links = [
-    'https://example.com/page1',
-    'https://example.com/page2',
-    'https://example.com/page3',
-    'https://example.com/page4',
+    'https://google.com/',
+    'https://facebook.com/',
 ];
 
 // Function to get a random link
