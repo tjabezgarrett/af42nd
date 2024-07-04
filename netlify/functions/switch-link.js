@@ -11,6 +11,10 @@ exports.handler = async function(event, context) {
 
     return {
         statusCode: 200,
+        headers: {
+            'Access-Control-Allow-Origin': 'https://tjabezgarrett.github.io/af42nd/',  // Allow only your GitHub Pages site
+            'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+        },
         body: JSON.stringify({ link: link })
     };
 };
