@@ -1,21 +1,13 @@
-// Array of links
-const links = [
-    'https://google.com/',
-    'https://facebook.com/'
-];
-
-// Function to get a random link
-function getRandomLink() {
-    const randomIndex = Math.floor(Math.random() * links.length);
-    console.log('Random index:', randomIndex);  // Debug: Log the random index
-    return links[randomIndex];
+async function fetchLink() {
+    try {
+        const response = await fetch('https://silver-crumble-9cf8e6.netlify.app/.netlify/functions/switch-link');
+        const data = await response.json();
+        const dynamicLink = document.getElementById('dynamic-link');
+        dynamicLink.href = data.link;
+        dynamicLink.textContent = data.link;
+    } catch (error) {
+        console.error('Error fetching the link:', error);
+    }
 }
 
-// Set the href of the link dynamically
-document.addEventListener('DOMContentLoaded', () => {
-    const dynamicLink = document.getElementById('dynamic-link');
-    const selectedLink = getRandomLink();
-    console.log('Selected link:', selectedLink);  // Debug: Log the selected link
-    dynamicLink.href = selectedLink;
-    dynamicLink.textContent = selectedLink;
-});
+document.addEventListener('DOMContentLoaded', fetchLink);
