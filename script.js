@@ -7,7 +7,7 @@ async function fetchLink() {
         const data = await response.json();
         const dynamicLink = document.getElementById('dynamic-link');
         dynamicLink.href = data.link;
-        dynamicLink.textContent = data.link;
+        dynamicLink.textContent = "Endowed Member Recommend Renewal"; // OLD: data.link;
     } catch (error) {
         console.error('Error fetching the link:', error);
     }
