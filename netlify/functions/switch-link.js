@@ -1,7 +1,7 @@
 let currentIndex = 0;  // This should be stored in a persistent storage in a real application
 
 const links = [
-    'https://google.com',
+    'https://calendly.com/af42assistant1/tr',
     'https://facebook.com'
 ];
 
