@@ -2,7 +2,7 @@ let currentIndex = 0;  // This should be stored in a persistent storage in a rea
 
 const links = [
     'https://calendly.com/af42assistant1/tr',
-    'https://facebook.com'
+    'https://calendly.com/af42assistant2/tr'
 ];
 
 exports.handler = async function(event, context) {
